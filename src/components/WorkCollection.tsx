@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import type { WorkEntry } from "@/lib/content-schema";
 import { AccentText } from "./AccentText";
 import { WorkImage } from "./WorkImage";
@@ -7,47 +6,24 @@ import { WorkImage } from "./WorkImage";
 export function WorkCollection({
   entries,
   label,
+  tag,
+  onTagSelect,
 }: {
   entries: WorkEntry[];
   label: string;
+  tag: string | null;
+  onTagSelect: (tag: string) => void;
 }) {
-  const [tag, setTag] = useState<string | null>(null);
-  const tags = [...new Set(entries.flatMap((entry) => entry.tags))];
   const visible = entries.filter((entry) => !tag || entry.tags.includes(tag));
-  function toggle(value: string) {
-    setTag((current) => (current === value ? null : value));
-  }
   return (
     <>
-      <div
-        className="my-7 flex flex-wrap items-center gap-2"
-        role="group"
-        aria-label={`${label}の技術タグ`}
-      >
-        <button
-          type="button"
-          className={`tag ${tag === null ? "tag-selected" : ""}`}
-          aria-pressed={tag === null}
-          onClick={() => setTag(null)}
-        >
-          すべて
-        </button>
-        {tags.map((value) => (
-          <button
-            type="button"
-            key={value}
-            className={`tag ${tag === value ? "tag-selected" : ""}`}
-            aria-pressed={tag === value}
-            onClick={() => toggle(value)}
-          >
-            {value}
-          </button>
-        ))}
-      </div>
       <p className="sr-only" aria-live="polite">
         {visible.length}件の{label}
       </p>
-      <div className="grid gap-x-10 md:grid-cols-2">
+      {visible.length === 0 && (
+        <p className="mt-7 text-sm text-stone-500">該当する作品はありません。</p>
+      )}
+      <div className="mt-7 grid gap-x-10 md:grid-cols-2">
         {visible.map((entry) => (
           <article key={entry.id} className="border-t border-stone-300 py-7">
             {entry.image && <WorkImage media={entry.image} />}
@@ -61,7 +37,7 @@ export function WorkCollection({
                   type="button"
                   className={`tag ${tag === value ? "tag-selected" : ""}`}
                   aria-pressed={tag === value}
-                  onClick={() => toggle(value)}
+                  onClick={() => onTagSelect(value)}
                 >
                   {value}
                 </button>
