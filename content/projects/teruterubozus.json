@@ -1,0 +1,99 @@
+{
+  "title": "TeruTeruBozus",
+  "category": "tool",
+  "description": "てるてる坊主を描いて、投稿して、晴れを願うWebアプリ。描画ツール・保存・投稿ギャラリーを実装。",
+  "role": "",
+  "links": [
+    {
+      "href": "https://github.com/cotore-game/TeruTeruBozus",
+      "label": "View repository"
+    }
+  ],
+  "slug": "teruterubozus",
+  "tags": ["PHP", "JavaScript", "SQL"],
+  "published": true,
+  "team": "",
+  "period": "",
+  "blocks": [
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "描いて、投稿して、晴れを願う"
+    },
+    {
+      "type": "paragraph",
+      "content": "TeruTeruBozusは、オリジナルのてるてる坊主を描き、投稿・共有できるWebアプリです。自分の描いたものを残すだけでなく、ほかの人の作品もギャラリーから眺められる構成にしています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "PHP・JavaScript・SQLを使い、描画ツール、作品の保存、投稿ギャラリーを実装しました。ゲーム制作とは異なる題材で、ブラウザーからサーバーへデータを送り、保存したものを再び画面に表示する流れに取り組んだ作品です。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "描く操作から、保存・表示へ"
+    },
+    {
+      "type": "paragraph",
+      "content": "画面上で描く操作と、作品を保存してほかの人にも見せる仕組みをつなげています。ブラウザー上の操作を扱う部分にはJavaScriptを、サーバー側の処理にはPHPを使い、SQLを使ったデータの保存と組み合わせています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "描画、保存、ギャラリーを一つの体験としてつなぐことで、「描いて終わり」にせず、投稿したものをあとから見返したり、ほかの作品を見たりできるようにしています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当した機能"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "ブラウザー上でてるてる坊主を描くための描画ツール"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "描いた作品を保存・投稿する処理"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "投稿作品を閲覧するギャラリー"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "制作で扱ったこと"
+    },
+    {
+      "type": "paragraph",
+      "content": "実装にはAIの支援も活用しています。PHPによるWebアプリの基本的な動きや設定を確認しながら、画面での入力、サーバーでの処理、保存したデータの表示までをつなげました。"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unity上の処理だけで完結する制作から視野を広げ、フロントエンドとサーバー側で役割が分かれるWebアプリに触れた経験です。"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "link",
+          "href": "https://github.com/cotore-game/TeruTeruBozus",
+          "content": [
+            {
+              "type": "text",
+              "text": "ソースコードを見る",
+              "styles": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

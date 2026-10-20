@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Arial, "Yu Gothic", "Meiryo", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+body {
+  background: #f4f2eb;
+  color: #242820;
+  -webkit-font-smoothing: antialiased;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #61754a;
+  outline-offset: 5px;
+}
+@layer components {
+  .shell {
+    @apply mx-auto w-[calc(100%-40px)] max-w-280 sm:w-[calc(100%-96px)];
+  }
+  .section-title {
+    @apply text-3xl font-medium tracking-tight sm:text-4xl;
+  }
+  .work-row {
+    @apply grid grid-cols-[1fr_24px] items-center gap-3 border-t border-stone-300 py-7 sm:grid-cols-[1fr_24px] sm:gap-6;
+  }
+  .work-row .status {
+    @apply col-span-2 font-mono text-[9px] tracking-wide text-[#61754a] sm:col-span-1;
+  }
+  .work-row h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+  .work-row p {
+    @apply text-xs leading-7 text-stone-600;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer components {
+  .tag {
+    @apply inline-flex items-center rounded-full border border-stone-300 px-3 py-1.5 text-xs text-stone-600;
+  }
+  button.tag {
+    @apply cursor-pointer transition-colors hover:border-stone-700;
+  }
+  .tag-selected {
+    @apply border-[#61754a] bg-[#61754a] text-white;
+  }
+}
+.article-body {
+  font-size: 1rem;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 2em 0 0.7em;
+}
+.article-body h1 {
+  font-size: 2rem;
+}
+.article-body h2 {
+  font-size: 1.65rem;
+}
+.article-body h3 {
+  font-size: 1.25rem;
+}
+.article-body p {
+  margin: 1em 0;
+}
+.article-body a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.article-body ul {
+  list-style: disc;
+  padding-left: 1.5em;
+}
+.article-body ol {
+  list-style: decimal;
+  padding-left: 1.5em;
+}
+.article-body img,
+.article-body video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-block: 1.5em;
+}
+.article-body pre {
+  overflow-x: auto;
+  padding: 1.25rem;
+  background: #e9e7de;
+  border-radius: 6px;
+  line-height: 1.6;
+}
+.article-body blockquote {
+  border-left: 2px solid #a1a191;
+  padding-left: 1rem;
+  color: #66695e;
+}
+.article-body table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.article-body td,
+.article-body th {
+  border: 1px solid #cecec1;
+  padding: 0.5rem 1rem;
+}

@@ -1,0 +1,125 @@
+{
+  "title": "MeteorCore Legion",
+  "category": "game",
+  "description": "仲間と共に駆ける、見下ろし型戦術アクションゲーム。",
+  "role": "担当：時間管理システム / 音声再生システム",
+  "links": [
+    {
+      "href": "https://meteorcore.itch.io/legion",
+      "label": "Play on itch.io"
+    }
+  ],
+  "slug": "meteorcore-legion",
+  "tags": ["Unity", "C#"],
+  "published": true,
+  "team": "",
+  "period": "",
+  "blocks": [
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "小隊を率いて戦う戦術アクション"
+    },
+    {
+      "type": "paragraph",
+      "content": "MeteorCore Legionは、ロボットの小隊を率いて戦う見下ろし型の戦術アクションゲームです。自分で攻撃や回避を行いながら、味方の召喚やスキルの指示を通して戦います。"
+    },
+    {
+      "type": "paragraph",
+      "content": "この作品では、時間管理システムと音声再生を扱うシステムを担当しました。チームのゲーム制作を、複数の場面で使う共通システムの提供から支える形で参加しています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "個別のタイムスケールを管理する"
+    },
+    {
+      "type": "paragraph",
+      "content": "提供した仕組みの一つが、個別のタイムスケールを管理するシステムです。ゲーム内の時間を扱う際には、全体の停止や減速と、個々の処理をどう進めるかを区別して考える必要があります。"
+    },
+    {
+      "type": "paragraph",
+      "content": "ゲーム全体にかかる時間の変化と、オブジェクトや処理ごとの時間の扱いを整理することは、複数の要素が同時に動くゲームを支える基盤になります。この作品への参加では、そうした共通部分を担当しました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "音声再生とAudioMixerまわり"
+    },
+    {
+      "type": "paragraph",
+      "content": "音声については、AudioMixerに関わる管理部分と、音声再生を扱うシステムを提供しました。ゲーム内の音を共通の仕組みから扱うための担当で、サウンドそのものの制作とは分けて参加しています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "時間制御と音声管理はいずれも、一つの場面だけで完結せず、ほかのゲーム処理と組み合わせて使う部分です。作品に必要な機能を、チームから利用できる仕組みとして提供する経験になりました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "データ処理に使ったライブラリ"
+    },
+    {
+      "type": "paragraph",
+      "content": "CSV4Unityも本作の制作に使用しています。ゲーム内の共通システムと、表形式のデータを扱う道具の両方から制作を支えました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当範囲"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "Unity / C#による個別タイムスケール管理システムの提供"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "音声再生システムとAudioMixer関連の処理"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "CSV4Unityの利用"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "公開先"
+    },
+    {
+      "type": "paragraph",
+      "content": "Windows版とmacOS版がitch.ioで公開されています。遊び方や作品全体の紹介は、公開ページをご覧ください。"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "link",
+          "href": "https://meteorcore.itch.io/legion",
+          "content": [
+            {
+              "type": "text",
+              "text": "MeteorCore Legionの公開ページ",
+              "styles": {}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cover": {
+    "src": "/portfolio/media/meteorcore-legion/cover.png",
+    "alt": "MeteorCore Legionのロゴとゲームの風景"
+  }
+}

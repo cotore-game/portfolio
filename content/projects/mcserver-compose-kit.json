@@ -1,0 +1,91 @@
+{
+  "title": "mcserver-compose-kit",
+  "category": "tool",
+  "description": "Minecraft Javaサーバーの構築と管理を、対話形式で支援するWSL2向けツールキット。",
+  "role": "",
+  "links": [
+    {
+      "href": "https://github.com/cotore-game/mcserver-compose-kit",
+      "label": "View repository"
+    }
+  ],
+  "slug": "mcserver-compose-kit",
+  "tags": ["Shell", "Docker"],
+  "published": true,
+  "team": "",
+  "period": "",
+  "blocks": [
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "Minecraftサーバーの準備を、対話形式で進める"
+    },
+    {
+      "type": "paragraph",
+      "content": "mcserver-compose-kitは、WSL2からMinecraft Java版サーバーを作成・管理するためのツールキットです。Docker Composeを使い、サーバーごとに独立した環境を用意します。"
+    },
+    {
+      "type": "paragraph",
+      "content": "ワールドの準備や設定ファイルの作成、起動・停止といった手作業をまとめることを目指し、AIを活用して作成しました。ターミナルの対話画面から操作するほか、サブコマンドを直接実行する使い方にも対応しています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "ワールドを選び、環境を作る"
+    },
+    {
+      "type": "paragraph",
+      "content": "ワールドはフォルダやZIPから取り込めます。保存データからMinecraftのバージョンを検出し、Javaイメージの候補を提示するなど、準備に必要な確認を補助します。"
+    },
+    {
+      "type": "paragraph",
+      "content": "サーバーごとにCompose設定、環境変数、データ用ディレクトリを分ける構成です。複数のサーバーを扱うときに、それぞれの設定やワールドを区別して管理できます。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "作ったあとも操作できる"
+    },
+    {
+      "type": "paragraph",
+      "content": "サーバーの起動・停止・再起動、状態やログの確認、設定の変更をターミナルから行えます。Windowsのファイル選択画面や日本語入力を利用する補助も含め、WSL2とWindowsを行き来する使い方を対象にしています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "この制作での位置づけ"
+    },
+    {
+      "type": "paragraph",
+      "content": "コードの生成にはAIを使用しています。手作業の自動化を題材に、必要な操作を整理し、対話的なツールとしてまとめた制作です。"
+    },
+    {
+      "type": "paragraph",
+      "content": "設定の自由度と、操作を案内する分かりやすさをどう両立させるかが、この種のツールで考える点です。サーバー構築に慣れた人にも役立つ範囲を見極めながら、使い方と機能を整理しています。"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "link",
+          "href": "https://github.com/cotore-game/mcserver-compose-kit",
+          "content": [
+            {
+              "type": "text",
+              "text": "使い方とソースコードを見る",
+              "styles": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

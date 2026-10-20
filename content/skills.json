@@ -1,0 +1,132 @@
+{
+  "strengths": [
+    {
+      "title": "ゲームの仕組みと演出",
+      "description": "Unity / C#を中心に、ゲームのシステムやビジュアルエフェクトを実装しています。"
+    },
+    {
+      "title": "制作を支える道具",
+      "description": "データを扱うライブラリや、繰り返す作業を減らす開発支援ツールを制作しています。"
+    },
+    {
+      "title": "チーム開発の支援",
+      "description": "プログラマーへの技術的な助言やノウハウ共有にも取り組んでいます。"
+    }
+  ],
+  "skills": [
+    {
+      "name": "C#",
+      "category": "言語",
+      "level": 5,
+      "note": "最も長く使っている言語。Unityを中心に制作で使用しています。"
+    },
+    {
+      "name": "C",
+      "category": "言語",
+      "level": 3,
+      "note": "大学で学習。基本的なコードやアルゴリズムを実装できます。"
+    },
+    {
+      "name": "C++",
+      "category": "言語",
+      "level": 3,
+      "note": "主に競技プログラミングで使用しています。"
+    },
+    {
+      "name": "Python",
+      "category": "言語",
+      "level": 3,
+      "note": "基本的なコードを書けます。"
+    },
+    {
+      "name": "Java",
+      "category": "言語",
+      "level": 3,
+      "note": "大学でスレッドの扱いまで学習しました。"
+    },
+    {
+      "name": "JavaScript",
+      "category": "言語",
+      "level": 2,
+      "note": "静的サイトとBotの制作に向けて学習。現在は復習しながら使用しています。"
+    },
+    {
+      "name": "TypeScript",
+      "category": "言語",
+      "level": 1,
+      "note": "学習中です。"
+    },
+    {
+      "name": "PHP",
+      "category": "言語",
+      "level": 2,
+      "note": "Webアプリの制作経験があります。基本的な動作や設定を理解し、実装は支援を受けながら進めています。"
+    },
+    {
+      "name": "HTML5",
+      "category": "言語",
+      "level": 2,
+      "note": "高校・大学で学習。タグや構造は理解しており、実装は確認しながら進めています。"
+    },
+    {
+      "name": "CSS",
+      "category": "言語",
+      "level": 2,
+      "note": "基本的な書き方は理解しています。具体的なプロパティは確認しながら使用します。"
+    },
+    {
+      "name": "Unity",
+      "category": "ツール",
+      "level": 5,
+      "note": "使い慣れているゲーム開発環境です。"
+    },
+    {
+      "name": "Visual Studio Code",
+      "category": "ツール",
+      "level": 4,
+      "note": "普段の開発でよく使っています。"
+    },
+    {
+      "name": "Ubuntu",
+      "category": "ツール",
+      "level": 2,
+      "note": "普段使用しているLinux環境です。"
+    },
+    {
+      "name": "UPPAAL",
+      "category": "ツール",
+      "level": 2,
+      "note": "最近使い始めています。"
+    },
+    {
+      "name": "Rocq",
+      "category": "ツール",
+      "level": 2,
+      "note": "最近使い始めています。"
+    },
+    {
+      "name": "Emacs",
+      "category": "ツール",
+      "level": 2,
+      "note": "授業での使用経験があります。現在はほとんど使っていません。"
+    },
+    {
+      "name": "React",
+      "category": "フレームワーク",
+      "level": 1,
+      "note": "学習中です。このポートフォリオでも使用しています。"
+    },
+    {
+      "name": "Next.js",
+      "category": "フレームワーク",
+      "level": 1,
+      "note": "このポートフォリオの制作を通して学習しています。"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "フレームワーク",
+      "level": 1,
+      "note": "このポートフォリオで使用しています。"
+    }
+  ]
+}

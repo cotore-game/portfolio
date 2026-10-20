@@ -1,0 +1,106 @@
+{
+  "title": "CSV4Unity",
+  "category": "tool",
+  "description": "CSVの読み込みから型変換・データ検証まで。ゲームデータを表形式で扱うためのライブラリ。",
+  "role": "",
+  "links": [
+    {
+      "href": "https://github.com/cotore-game/CSV4Unity",
+      "label": "View repository"
+    }
+  ],
+  "slug": "csv4unity",
+  "tags": ["Unity", "C#"],
+  "published": true,
+  "team": "",
+  "period": "",
+  "blocks": [
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "Unityで、ゲーム用のCSVを扱う"
+    },
+    {
+      "type": "paragraph",
+      "content": "CSV4Unityは、UnityのTextAssetやCSV文字列からデータを読み取り、行・列・セルの単位で参照するためのC#ライブラリです。CSVの解析だけでなく、列の指定、型変換、検証、Editorでの確認までを扱います。"
+    },
+    {
+      "type": "paragraph",
+      "content": "急擬山、猫を題材にしたゲーム、MeteorCore Legion、MeteorCore Bladeなどの制作で使用しています。ゲーム内のデータを表形式で扱うための道具として開発を続けています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "同じ列でも、行によって意味が変わる"
+    },
+    {
+      "type": "paragraph",
+      "content": "ゲームのシナリオCSVでは、同じ引数の列でも、行のコマンドによって背景名、待機時間、真偽値など、入れる値が変わることがあります。CSV全体を一つのクラスへ変換する方式だけでは扱いづらい、このようなデータを対象にしています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "必要なセルを、必要なタイミングで明示的に型変換する構成にしています。列はEnumで指定できるため、列名の文字列をコードのあちこちに直接書かずに参照できます。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "読み込み・参照・検証を分ける"
+    },
+    {
+      "type": "paragraph",
+      "content": "コアでは、元のCSV文字列とセル範囲を保持するCsvDocument、CSVパーサー、型付きのCsvTable、型変換、明示的に作成する検索用Indexなどへ役割を分けています。RuntimeにUnity Editorへの依存を持ち込まないことも設計上の方針です。"
+    },
+    {
+      "type": "paragraph",
+      "content": "解析はRFC 4180形式の引用符やセル内改行に対応します。単純なカンマ区切りとして分割するだけでは扱えない、文章や引用符を含むデータも読み込めるようにしています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "データの間違いを制作中に見つける"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enumに付けた属性を使って、必須値や型などの制約を定義できます。行の条件に応じた検証も用意し、コマンドごとに必要な引数が異なるCSVに対応しています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "Editor側には、手動検証、文字コードの確認とUTF-8変換、読み取り専用Viewerを用意しました。CSVを書き出してからゲームを動かすまでの間に、データを確認するための機能です。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "継続していること"
+    },
+    {
+      "type": "paragraph",
+      "content": "現在も1.0未満の再設計を進めており、APIは変更される可能性があります。利用するときは、タグかコミットを固定する形にしています。実際のゲーム制作で使いながら、CSVを読み込む処理と、データを確認する作業の両方を整えています。"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "link",
+          "href": "https://github.com/cotore-game/CSV4Unity",
+          "content": [
+            {
+              "type": "text",
+              "text": "コードと使い方を見る",
+              "styles": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

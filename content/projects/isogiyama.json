@@ -1,0 +1,151 @@
+{
+  "slug": "isogiyama",
+  "title": "急擬山",
+  "category": "game",
+  "description": "祓詞を入力して怪異を祓い、友人のもとへ向かうホラータイピングゲーム。",
+  "role": "担当：プログラミング / ビジュアルエフェクト",
+  "tags": ["Unity", "C#"],
+  "links": [
+    {
+      "label": "Play on unityroom",
+      "href": "https://unityroom.com/games/isogiyama"
+    },
+    {
+      "label": "Source",
+      "href": "https://github.com/epen3420/IsogiYama"
+    }
+  ],
+  "published": true,
+  "team": "",
+  "period": "",
+  "blocks": [
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "文字を打って、怪異を祓う"
+    },
+    {
+      "type": "paragraph",
+      "content": "急擬山は、祓詞を入力して怪異を祓い、友人のもとへ向かうホラータイピングゲームです。Unity / C#で制作し、プログラミングとビジュアルエフェクトを担当しました。"
+    },
+    {
+      "type": "image",
+      "props": {
+        "url": "/portfolio/media/isogiyama/gameplay-guide.png",
+        "caption": "タイピングと物語の進行を紹介するゲーム説明画像",
+        "name": "gameplay-guide.png",
+        "showPreview": true,
+        "previewWidth": 768
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "タイピングそのものがゲームを進める操作になるため、文字を正しく判定する処理に加えて、入力中の表示や、成功・失敗から次の場面へ進む流れも担当範囲に含まれます。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "複数の打ち方を受け付けるローマ字入力"
+    },
+    {
+      "type": "paragraph",
+      "content": "日本語のローマ字入力では、同じ文字でも「si」「shi」のように複数の打ち方があります。入力候補をTrie構造で扱い、打ち込まれた文字に応じて、受け付けられる経路をたどる仕組みを実装しました。"
+    },
+    {
+      "type": "paragraph",
+      "content": "判定と画面表示の食い違いも修正しています。たとえば「shi」と打ち始めたのに、画面には最初の候補である「si」が残り続けると、入力できていても分かりづらくなります。確定済みのローマ字と入力途中の部分を分け、選択中の入力経路に沿った候補を表示するようにしました。"
+    },
+    {
+      "type": "paragraph",
+      "content": "繰り返し動く入力処理では、セグメントごとのキャッシュや、不要なアロケーションを減らす構成も検討しました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "シナリオと演出をCSVで扱う"
+    },
+    {
+      "type": "paragraph",
+      "content": "シナリオデータの読み込みにはCSV4Unityを使用しています。文章だけでなく、待機、背景の切り替え、画面の揺れなどをコマンドと引数で指定します。"
+    },
+    {
+      "type": "paragraph",
+      "content": "コマンドによって必要な列や引数の型が変わるため、CSVのスキーマに条件付きの検証を追加しました。背景名を文字列として読む箇所と、時間を数値として読む箇所を区別し、データと実装の不一致を見つけやすくしています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "画面の揺れでは、小数の時間指定をCSV側だけでなく読み込み処理側もfloatへそろえました。また、本文に引用符が入るCSVの書式を修正するなど、演出データを安定して読み込むための調整も行っています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "失敗時の演出と画面遷移"
+    },
+    {
+      "type": "paragraph",
+      "content": "時間切れの処理では、血しぶきの演出を表示してからリザルトへ進む流れを調整しました。演出の待機とゲームの終了処理、リザルト後のタイトルへの復帰をつなぎ、失敗時にも画面遷移が途切れないようにしています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "主な担当・使用技術"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "Unity / C#によるゲームプログラミングとビジュアルエフェクト"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "Trieを用いたローマ字入力の判定と、入力候補表示の調整"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "CSV4Unityによるシナリオ読み込みと、コマンドごとのデータ検証"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "時間切れ演出、リザルト、タイトルへ戻るゲーム進行の調整"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "作品のビジュアル"
+    },
+    {
+      "type": "image",
+      "props": {
+        "url": "/portfolio/media/isogiyama/icon.png",
+        "caption": "急擬山の作品アイコン",
+        "name": "icon.png",
+        "showPreview": true,
+        "previewWidth": 400
+      }
+    },
+    {
+      "type": "image",
+      "props": {
+        "url": "/portfolio/media/isogiyama/thank-you.jpg",
+        "caption": "プレイへのお礼に描かれたイラスト",
+        "name": "thank-you.jpg",
+        "showPreview": true,
+        "previewWidth": 768
+      }
+    }
+  ],
+  "cover": {
+    "src": "/portfolio/media/isogiyama/title.png",
+    "alt": "急擬山のタイトルと物語の導入が描かれた紹介画像"
+  }
+}
