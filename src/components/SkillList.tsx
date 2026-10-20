@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { SkillLogo } from "./SkillLogo";
 import { AccentText } from "./AccentText";
 import { levels, type Skills } from "@/lib/content-schema";
 
@@ -55,6 +56,7 @@ export function SkillList({ skills }: { skills: Skills["skills"] }) {
             className="grid grid-cols-[1fr_auto] gap-3 border-t border-stone-300 py-5 sm:grid-cols-[1fr_130px_140px]"
           >
             <div className="flex items-start gap-4">
+              <SkillLogo name={skill.name} />
               <div className="min-w-0">
                 <span>{skill.name}</span>
                 {skill.note && (
