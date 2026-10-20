@@ -5,7 +5,7 @@
   "packageManager": "pnpm@11.25.0",
   "scripts": {
     "dev": "node scripts/dev.mjs",
-    "build": "next build",
+    "build": "node scripts/build.mjs",
     "typecheck": "tsc --noEmit",
     "dev:site": "next dev --hostname 127.0.0.1",
     "dev:editor": "next dev studio --hostname 127.0.0.1 --port 3002",
