@@ -14,6 +14,11 @@ export function SiteHeader() {
         <Link href="/#works">作品</Link>
         <Link href="/skills/">スキル</Link>
         <a href="https://github.com/cotore-game">GitHub ↗</a>
+        {process.env.NODE_ENV === "development" && (
+          <a href="http://localhost:3002" className="text-[#61754a]">
+            記事を書く ↗
+          </a>
+        )}
       </nav>
     </header>
   );

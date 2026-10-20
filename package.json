@@ -4,9 +4,12 @@
   "private": true,
   "packageManager": "pnpm@11.25.0",
   "scripts": {
-    "dev": "next dev --hostname 127.0.0.1",
+    "dev": "node scripts/dev.mjs",
     "build": "next build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "dev:site": "next dev --hostname 127.0.0.1",
+    "dev:editor": "next dev studio --hostname 127.0.0.1 --port 3002",
+    "typecheck:editor": "tsc --noEmit --project studio/tsconfig.json"
   },
   "dependencies": {
     "@blocknote/core": "^0.56.0",

@@ -99,6 +99,14 @@ export default async function ProjectPage({
           className="article-body max-w-3xl"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        {process.env.NODE_ENV === "development" && (
+          <a
+            className="mt-12 inline-block text-sm underline"
+            href={`http://localhost:3002/?slug=${project.slug}`}
+          >
+            この記事を編集する ↗
+          </a>
+        )}
       </main>
     </>
   );
