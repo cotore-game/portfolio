@@ -1,0 +1,177 @@
+{
+  "slug": "festival-run-2026",
+  "title": "2026年 学園祭展示作品",
+  "category": "game",
+  "description": "身体の左右移動とポーズで遊ぶ、学園祭向けの3レーン・ランゲーム。Unityクライアントの設計・実装、UIの設計と演出、描画の最適化に取り組みました。",
+  "role": "Unityクライアントの設計・実装 / UI設計・演出 / 描画最適化",
+  "tags": [
+    "Unity",
+    "C#",
+    "URP",
+    "Shader Graph",
+    "UniTask",
+    "R3",
+    "VContainer",
+    "LitMotion",
+    "YOLO"
+  ],
+  "links": [],
+  "published": true,
+  "team": "ゲームクライアントと身体認識を分担。ランキングUIのUnity実装は友人に依頼",
+  "period": "2026年10月11日〜10月25日",
+  "blocks": [
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "概要"
+    },
+    {
+      "type": "paragraph",
+      "content": "カメラの前で左右に動き、敵に合わせたポーズを取って進む、学園祭展示向けのランゲームです。トロッコに乗ったアバターを操作し、3本のレーンでコインを集め、敵を撃退しながら得点を伸ばします。制作は完了しています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unityがゲームと画面表示を担当し、別のPythonプログラムがYOLOを用いた身体認識を担当する構成です。身体入力を受け取るだけでなく、参加者の検出から練習、ゲーム本編、結果表示までを一つの流れとしてつなげました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "制作の目的"
+    },
+    {
+      "type": "paragraph",
+      "content": "キーボードやゲームパッドに慣れていない人にも、身体を動かして直感的に遊んでもらうことを目指しました。子どもをはじめ幅広い年代に伝わる操作と、見ている人も楽しめるにぎやかな画面を重視しています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "身体認識とゲームを同時に動かすため、描画負荷を抑えながら、風景やアニメーション、VFXの楽しさを残すことも制作上の目標にしました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当したこと"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "Unityクライアントのゲーム進行、入力との接続、画面遷移の設計・実装"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "タイトル、練習、開始・終了のUIと演出、ランキングUIのデザインモック作成"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "敵・コインの配置と難易度、アニメーション・VFXの調整"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "URP / Shader Graphを使った画作りと、プール・可視範囲・LODなどの描画最適化"
+    },
+    {
+      "type": "paragraph",
+      "content": "身体認識側は別担当との分担です。この記事では、主に自分が取り組んだUnityクライアントと、認識側をつなぐ部分を紹介します。"
+    },
+    {
+      "type": "paragraph",
+      "content": "ランキングのUIは、HTML・CSS・JavaScriptで作成したデザインモックをもとに、Unity側のUI実装を急遽友人にお願いしました。画面のデザインと実装の担当を分け、制作を進めました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "工夫した点"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
+      "content": "初めてでも操作を覚えられる導入"
+    },
+    {
+      "type": "paragraph",
+      "content": "最初から本編へ入るのではなく、参加者の検出、操作の練習、カウントダウンを経て遊び始める流れにしました。ポーズはアバターの見本と進捗表示で案内し、何をすればよいかを画面から読み取れるようにしています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "身体入力の追跡が途切れたときはゲーム進行を止め、入力待ちと再取得の状態を表示します。認識の一時的な途切れによって、そのまま被弾やゲームオーバーにつながらないようにしました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
+      "content": "速さだけでなく、判断にも緩急をつける"
+    },
+    {
+      "type": "paragraph",
+      "content": "進行に合わせて速度と配置の難しさを変えつつ、難しい配置ばかりが続かないようにしました。同じポーズで敵をまとめて倒す爽快な区間、敵とコインのどちらを選ぶか考える区間、先の列を見て進路とポーズを判断する区間を組み合わせています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "難所の直後には落ち着ける区間を入れ、被弾時の減速もブレーキのように滑らかにつなぎました。配置はScriptableObjectで管理し、コードと切り離して調整できるようにしています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
+      "content": "演出を残しながら、同時稼働の負荷を抑える"
+    },
+    {
+      "type": "paragraph",
+      "content": "認識処理とゲームを同時に動かすことを前提に、敵・コイン・VFXの再利用、視点に応じた可視範囲、草のLODなどを調整しました。固定されたカメラで何が見えるかを利用し、画面全体の印象を保ちながら不要な処理を減らしています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "背景にはワールドベンディングを取り入れ、速度線、車輪の火花、敵の反応、終了時のラグドールなどを組み合わせました。単に軽くするだけでなく、身体を動かした手応えが視覚にも返ってくるように調整しました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
+      "content": "演出とゲーム処理の役割を分ける"
+    },
+    {
+      "type": "paragraph",
+      "content": "UniTaskで非同期の待機、R3で状態やイベントの通知、VContainerでゲームの依存関係を整理しました。固定の演出はAnimation / Timeline、状態に応じた表示の変化はコードやLitMotionで扱い、同じTransformを複数の仕組みが同時に動かさないようにしています。"
+    },
+    {
+      "type": "paragraph",
+      "content": "タイトルからロード、本編、結果への遷移では、表示の準備ができてから画面を開く流れにしました。ランキングにはGASとGoogle Sheetsを組み合わせ、ゲーム本体とは別の通信処理として扱っています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "プレイ動画"
+    },
+    {
+      "type": "paragraph",
+      "content": "ゲームの導入からプレイまでの流れを紹介する動画です。音声付きで再生できます。"
+    },
+    {
+      "type": "video",
+      "props": {
+        "url": "/portfolio/media/festival-run-2026/gameplay.mp4",
+        "name": "gameplay.mp4",
+        "caption": "2026年 学園祭展示作品のプレイ動画",
+        "showPreview": true,
+        "previewWidth": 960
+      }
+    }
+  ],
+  "cover": {
+    "src": "/portfolio/media/festival-run-2026/cover.png",
+    "alt": "身体操作ランゲームのトロッコと線路、周囲の街並み"
+  }
+}
