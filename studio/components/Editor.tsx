@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import type { PartialBlock } from "@blocknote/core";
+import { createArticleBlocks } from "../../src/lib/article-template";
+import { getArticleHeadings } from "../../src/lib/article-headings";
 import { ja } from "@blocknote/core/locales";
 import { useCreateBlockNote } from "@blocknote/react";
 import { BlockNoteView } from "@blocknote/mantine";
@@ -45,6 +47,7 @@ function ArticleForm({
       return result.url;
     },
   });
+  const [outline, setOutline] = useState(() => getArticleHeadings(project.blocks));
   function change<K extends keyof Project>(key: K, value: Project[K]) {
     setProject((current) => ({ ...current, [key]: value }));
     onDirty(true);
@@ -205,6 +208,14 @@ function ArticleForm({
               onChange={(e) => change("period", e.target.value)}
             />
           </label>
+          <label>
+            作品の最終更新日
+            <input
+              placeholder="制作期間と分けて記載する場合だけ入力"
+              value={project.lastUpdated ?? ""}
+              onChange={(e) => change("lastUpdated", e.target.value)}
+            />
+          </label>
           <label className="checkbox full">
             <input
               type="checkbox"
@@ -267,16 +278,27 @@ function ArticleForm({
           </fieldset>
         </div>
       )}
+      <details className="editor-outline" open>
+        <summary>目次（見出しから自動生成）</summary>
+        <ol>
+          {outline.map(({ id, text, level }) => (
+            <li key={id} style={{ marginLeft: level > 2 ? "1.25rem" : 0 }}>{text}</li>
+          ))}
+        </ol>
+      </details>
       <div className="editor-paper">
         <BlockNoteView
           editor={editor}
           theme="light"
           editable={!preview}
-          onChange={() => onDirty(true)}
+          onChange={() => {
+            onDirty(true);
+            setOutline(getArticleHeadings(editor.document));
+          }}
         />
       </div>
       <p className="hint">
-        「/」で見出し・リスト・画像・動画などを追加できます。画像や動画はリポジトリのpublic/mediaへ保存します。
+        概要・制作の目的・担当したこと・工夫した点を入口に、その後は自由に追記できます。目次は見出しに追従します。「/」で見出し・リスト・画像・動画などを追加できます。画像や動画はリポジトリのpublic/mediaへ保存します。
       </p>
       {project.published && (
         <a
@@ -497,7 +519,7 @@ export default function Editor() {
         team: "",
         period: "",
         published: false,
-        blocks: [{ type: "paragraph", content: "" }],
+        blocks: createArticleBlocks(),
       },
     });
     setDirty(true);

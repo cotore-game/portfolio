@@ -35,6 +35,7 @@ export const projectSchema = z.object({
   published: z.boolean(),
   team: z.string().max(300),
   period: z.string().max(300),
+  lastUpdated: z.string().max(300).optional(),
   blocks: z.array(blockSchema).min(1).max(3000),
 });
 export type Project = Omit<z.infer<typeof projectSchema>, "blocks"> & {

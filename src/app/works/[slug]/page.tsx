@@ -1,3 +1,5 @@
+import { ArticleToc } from "@/components/ArticleToc";
+import { getArticleHeadings, prepareArticleHtml } from "@/lib/article-headings";
 import { WorkImage } from "@/components/WorkImage";
 import { AccentText } from "@/components/AccentText";
 import { accentPunctuation } from "@/lib/punctuation";
@@ -37,8 +39,10 @@ export default async function ProjectPage({
   );
   if (!project) notFound();
   const editor = ServerBlockNoteEditor.create();
-  const html = await editor.blocksToHTMLLossy(
-    accentPunctuation(project.blocks),
+  const headings = getArticleHeadings(project.blocks);
+  const html = prepareArticleHtml(
+    await editor.blocksToHTMLLossy(accentPunctuation(project.blocks)),
+    headings,
   );
 
   return (
@@ -67,6 +71,7 @@ export default async function ProjectPage({
               ["担当", project.role.replace(/^担当：/, "")],
               ["制作体制", project.team],
               ["制作期間", project.period],
+              ["最終更新", project.lastUpdated ?? ""],
             ]
               .filter(([, value]) => value)
               .map(([label, value]) => (
@@ -83,22 +88,25 @@ export default async function ProjectPage({
               <a
                 href={link.href}
                 key={link.href}
-                className="border-b border-stone-400 pb-1"
+                className="underline decoration-stone-400 underline-offset-4 hover:decoration-stone-900"
               >
                 {link.label} ↗
               </a>
             ))}
           </div>
         </header>
-        {project.cover && (
-          <div className="max-w-3xl">
-            <WorkImage media={project.cover} hero />
+        <div className="article-layout mt-10">
+          <aside className="article-sidebar">
+            <ArticleToc headings={headings} />
+          </aside>
+          <div className="article-main min-w-0">
+            {project.cover && <WorkImage media={project.cover} hero />}
+            <article
+              className="article-body"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
-        )}
-        <article
-          className="article-body max-w-3xl"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        </div>
         {process.env.NODE_ENV === "development" && (
           <a
             className="mt-12 inline-block text-sm underline"

@@ -215,3 +215,7 @@ a:focus-visible {
   resize: vertical;
   line-height: 1.8;
 }
+
+.editor-outline { margin: 1rem 0; padding: 1rem 1.5rem; border: 1px solid #cecec1; border-radius: 8px; }
+.editor-outline summary { cursor: pointer; font-weight: 600; }
+.editor-outline ol { margin-top: 1rem; padding-left: 1.25rem; line-height: 1.9; }
