@@ -16,16 +16,24 @@ export function ProjectCard({
   return (
     <article className="border-t border-stone-300 py-7">
       {project.cover && (
-        <Link href={`/works/${project.slug}/`}>
+        <Link
+          href={`/works/${project.slug}/`}
+          aria-label={`${project.title}の制作記事を読む`}
+          className="relative block transition-opacity hover:opacity-90"
+        >
           <WorkImage media={project.cover} />
+          <span className="absolute right-3 bottom-3 rounded-full bg-stone-800 px-4 py-2 text-xs text-white">
+            制作記事を読む →
+          </span>
         </Link>
       )}
       <h3 className="mb-4 text-2xl font-medium tracking-tight">
         <Link
           href={`/works/${project.slug}/`}
-          className="hover:underline decoration-stone-400 underline-offset-4"
+          className="inline-flex items-center gap-3 decoration-stone-400 underline-offset-4 hover:underline"
         >
           {project.title}
+          <span aria-hidden="true" className="text-lg text-[#61754a]">↗</span>
         </Link>
       </h3>
       <div className="mb-5 flex flex-wrap gap-2" aria-label="使用技術">
@@ -49,18 +57,19 @@ export function ProjectCard({
           <AccentText>{project.role}</AccentText>
         </p>
       )}
-      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-xs">
+      <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs">
         <Link
           href={`/works/${project.slug}/`}
-          className="border-b border-stone-600 pb-1"
+          className="inline-flex items-center rounded-full bg-[#61754a] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#4e603b]"
+          aria-label={`${project.title}の制作記事を読む`}
         >
-          詳しく見る →
+          制作記事を読む →
         </Link>
         {project.links.map((link) => (
           <a
             key={link.href}
             href={link.href}
-            className="border-b border-stone-300 pb-1 hover:border-stone-900"
+            className="underline decoration-stone-300 underline-offset-4 hover:decoration-stone-900"
           >
             {link.label} ↗
           </a>
