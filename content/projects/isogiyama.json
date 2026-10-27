@@ -4,7 +4,10 @@
   "category": "game",
   "description": "祓詞を入力して怪異を祓い、友人のもとへ向かうホラータイピングゲーム。",
   "role": "担当：プログラミング / ビジュアルエフェクト",
-  "tags": ["Unity", "C#"],
+  "tags": [
+    "Unity",
+    "C#"
+  ],
   "links": [
     {
       "label": "Play on unityroom",
@@ -17,18 +20,22 @@
   ],
   "published": true,
   "team": "",
-  "period": "",
+  "period": "2025年4月23日〜5月7日（ゲームジャム）",
   "blocks": [
     {
       "type": "heading",
       "props": {
         "level": 2
       },
-      "content": "文字を打って、怪異を祓う"
+      "content": "概要"
     },
     {
       "type": "paragraph",
       "content": "急擬山は、祓詞を入力して怪異を祓い、友人のもとへ向かうホラータイピングゲームです。Unity / C#で制作し、プログラミングとビジュアルエフェクトを担当しました。"
+    },
+    {
+      "type": "paragraph",
+      "content": "「山」をテーマにしたゲームジャム作品として、2025年4月23日から5月7日までの短期間で制作しました。その後も継続的に更新し、最終更新日は2026年8月29日です。"
     },
     {
       "type": "image",
@@ -49,6 +56,47 @@
       "props": {
         "level": 2
       },
+      "content": "制作の目的"
+    },
+    {
+      "type": "paragraph",
+      "content": "怪異を祓う行為をタイピングに重ね、入力の緊張感とホラーの物語がつながる体験をつくることを目指しました。入力判定だけでなく、表示や演出まで含めて遊びやすくすることを重視しました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当したこと"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "Unity / C#によるゲームプログラミングとビジュアルエフェクト"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "Trieを用いたローマ字入力判定と入力候補の表示"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "以前のノベルゲームシステムを流用したシナリオ読み込み・データ検証"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "時間切れ演出からリザルト・タイトルへ戻る進行の調整"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "工夫した点"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
       "content": "複数の打ち方を受け付けるローマ字入力"
     },
     {
@@ -66,13 +114,13 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "シナリオと演出をCSVで扱う"
     },
     {
       "type": "paragraph",
-      "content": "シナリオデータの読み込みにはCSV4Unityを使用しています。文章だけでなく、待機、背景の切り替え、画面の揺れなどをコマンドと引数で指定します。"
+      "content": "シナリオ処理には、以前制作していたノベルゲームシステムを流用しました。文章だけでなく、待機、背景の切り替え、画面の揺れなどをコマンドと引数で指定します。この仕組みは、後にCSV4Unityとして独立したライブラリへと発展しています。"
     },
     {
       "type": "paragraph",
@@ -85,7 +133,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "失敗時の演出と画面遷移"
     },
@@ -96,30 +144,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
-      },
-      "content": "主な担当・使用技術"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "Unity / C#によるゲームプログラミングとビジュアルエフェクト"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "Trieを用いたローマ字入力の判定と、入力候補表示の調整"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "CSV4Unityによるシナリオ読み込みと、コマンドごとのデータ検証"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "時間切れ演出、リザルト、タイトルへ戻るゲーム進行の調整"
-    },
-    {
-      "type": "heading",
-      "props": {
-        "level": 2
+        "level": 3
       },
       "content": "作品のビジュアル"
     },
@@ -147,5 +172,6 @@
   "cover": {
     "src": "/portfolio/media/isogiyama/title.png",
     "alt": "急擬山のタイトルと物語の導入が描かれた紹介画像"
-  }
+  },
+  "lastUpdated": "2026年8月29日"
 }

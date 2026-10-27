@@ -119,3 +119,17 @@ button:focus-visible {
   border: 1px solid #cecec1;
   padding: 0.5rem 1rem;
 }
+
+.article-layout { display: grid; gap: 2rem; }
+.article-sidebar { min-width: 0; }
+.article-toc { border-block: 1px solid #cecec1; padding-block: 1.25rem; }
+.article-body :is(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 2rem; }
+.article-body > h2:first-child { margin-top: 0; }
+.article-body video { display: block; width: 100%; background: #161914; }
+.article-body figure { margin-block: 1.5rem; }
+.article-body figcaption { margin-top: .5rem; color: #66695e; font-size: .8rem; }
+@media (min-width: 1024px) {
+  .article-layout { grid-template-columns: minmax(0, 48rem) minmax(12rem, 1fr); gap: 3rem; align-items: start; }
+  .article-sidebar { grid-column: 2; grid-row: 1; position: sticky; top: 2rem; max-height: calc(100vh - 4rem); overflow-y: auto; }
+  .article-main { grid-column: 1; grid-row: 1; }
+}

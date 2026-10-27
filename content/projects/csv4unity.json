@@ -10,17 +10,20 @@
     }
   ],
   "slug": "csv4unity",
-  "tags": ["Unity", "C#"],
+  "tags": [
+    "Unity",
+    "C#"
+  ],
   "published": true,
   "team": "",
-  "period": "",
+  "period": "2024年4月頃〜（前身の開発を含む）",
   "blocks": [
     {
       "type": "heading",
       "props": {
         "level": 2
       },
-      "content": "Unityで、ゲーム用のCSVを扱う"
+      "content": "概要"
     },
     {
       "type": "paragraph",
@@ -28,12 +31,49 @@
     },
     {
       "type": "paragraph",
-      "content": "急擬山、猫を題材にしたゲーム、MeteorCore Legion、MeteorCore Bladeなどの制作で使用しています。ゲーム内のデータを表形式で扱うための道具として開発を続けています。"
+      "content": "前身となる仕組みは急擬山で流用し、その後ライブラリとして独立させて開発を続けています。猫を題材にしたゲーム、MeteorCore Legion、MeteorCore Bladeなどでも、ゲーム内のデータを表形式で扱うために使用しています。"
     },
     {
       "type": "heading",
       "props": {
         "level": 2
+      },
+      "content": "制作の目的"
+    },
+    {
+      "type": "paragraph",
+      "content": "シナリオなどの表形式データを、Unityから安全に参照・変換・検証できるようにするために制作しました。行のコマンドによって同じ列の意味が変わるデータも扱えることを重視しています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当したこと"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "C#ライブラリの設計・実装"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "セルの参照・型変換と条件付きのデータ検証"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "Unity Editor向けの確認・検証機能"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "工夫した点"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
       },
       "content": "同じ列でも、行によって意味が変わる"
     },
@@ -48,7 +88,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "読み込み・参照・検証を分ける"
     },
@@ -63,7 +103,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "データの間違いを制作中に見つける"
     },
@@ -78,7 +118,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "継続していること"
     },
@@ -101,6 +141,21 @@
           ]
         }
       ]
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "開発の経緯"
+    },
+    {
+      "type": "paragraph",
+      "content": "前身を作り始めたのは、2024年4月頃にノベルゲームを制作しようとしたときです。そのノベルゲームシステムを、2025年のゲームジャム作品「急擬山」で流用しました。"
+    },
+    {
+      "type": "paragraph",
+      "content": "作品の中で使っていた仕組みを、モジュールとして独立したライブラリにできたら面白いのではないかと考えたことが、CSV4Unityの開発につながっています。最初から汎用ライブラリを目指したのではなく、実際のゲーム制作で使ったコードから発展した道具です。"
     }
   ]
 }

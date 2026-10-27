@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "dev:site": "next dev --hostname 127.0.0.1",
     "dev:editor": "next dev studio --hostname 127.0.0.1 --port 3002",
-    "typecheck:editor": "tsc --noEmit --project studio/tsconfig.json"
+    "typecheck:editor": "tsc --noEmit --project studio/tsconfig.json",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs"
   },
   "dependencies": {
     "@blocknote/core": "^0.56.0",
