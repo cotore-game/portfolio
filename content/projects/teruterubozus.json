@@ -10,7 +10,11 @@
     }
   ],
   "slug": "teruterubozus",
-  "tags": ["PHP", "JavaScript", "SQL"],
+  "tags": [
+    "PHP",
+    "JavaScript",
+    "SQL"
+  ],
   "published": true,
   "team": "",
   "period": "",
@@ -20,7 +24,7 @@
       "props": {
         "level": 2
       },
-      "content": "描いて、投稿して、晴れを願う"
+      "content": "概要"
     },
     {
       "type": "paragraph",
@@ -35,6 +39,43 @@
       "props": {
         "level": 2
       },
+      "content": "制作の目的"
+    },
+    {
+      "type": "paragraph",
+      "content": "てるてる坊主を描いて晴れを願う行為を、投稿・共有できるWeb上の体験にすることを目指しました。描くことに加えて、投稿後も自分やほかの人の作品を見られるようにしています。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当したこと"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "ブラウザー上の描画ツール"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "作品を保存・投稿する処理"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "投稿作品のギャラリー。実装にはAIの支援も活用"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "工夫した点"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
       "content": "描く操作から、保存・表示へ"
     },
     {
@@ -48,26 +89,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
-      },
-      "content": "担当した機能"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "ブラウザー上でてるてる坊主を描くための描画ツール"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "描いた作品を保存・投稿する処理"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "投稿作品を閲覧するギャラリー"
-    },
-    {
-      "type": "heading",
-      "props": {
-        "level": 2
+        "level": 3
       },
       "content": "制作で扱ったこと"
     },

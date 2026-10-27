@@ -10,17 +10,20 @@
     }
   ],
   "slug": "meteorcore-legion",
-  "tags": ["Unity", "C#"],
+  "tags": [
+    "Unity",
+    "C#"
+  ],
   "published": true,
   "team": "",
-  "period": "",
+  "period": "2025年6月2日〜2026年6月27日",
   "blocks": [
     {
       "type": "heading",
       "props": {
         "level": 2
       },
-      "content": "小隊を率いて戦う戦術アクション"
+      "content": "概要"
     },
     {
       "type": "paragraph",
@@ -35,6 +38,43 @@
       "props": {
         "level": 2
       },
+      "content": "制作の目的"
+    },
+    {
+      "type": "paragraph",
+      "content": "複数のキャラクターや演出が同時に動くゲームで、時間の停止・減速や音声再生を共通の仕組みとして扱えるようにし、チームの制作を支えることが目的です。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当したこと"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "個別タイムスケールを管理するシステムの提供"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "音声再生システムとAudioMixer関連の処理"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "制作で使用したCSV4Unityの開発"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "工夫した点"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
       "content": "個別のタイムスケールを管理する"
     },
     {
@@ -48,7 +88,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "音声再生とAudioMixerまわり"
     },
@@ -63,7 +103,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "データ処理に使ったライブラリ"
     },
@@ -74,26 +114,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
-      },
-      "content": "担当範囲"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "Unity / C#による個別タイムスケール管理システムの提供"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "音声再生システムとAudioMixer関連の処理"
-    },
-    {
-      "type": "bulletListItem",
-      "content": "CSV4Unityの利用"
-    },
-    {
-      "type": "heading",
-      "props": {
-        "level": 2
+        "level": 3
       },
       "content": "公開先"
     },

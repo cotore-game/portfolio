@@ -10,7 +10,10 @@
     }
   ],
   "slug": "mcserver-compose-kit",
-  "tags": ["Shell", "Docker"],
+  "tags": [
+    "Shell",
+    "Docker"
+  ],
   "published": true,
   "team": "",
   "period": "",
@@ -20,7 +23,7 @@
       "props": {
         "level": 2
       },
-      "content": "Minecraftサーバーの準備を、対話形式で進める"
+      "content": "概要"
     },
     {
       "type": "paragraph",
@@ -35,6 +38,39 @@
       "props": {
         "level": 2
       },
+      "content": "制作の目的"
+    },
+    {
+      "type": "paragraph",
+      "content": "ワールドの取り込み、設定、起動・停止といったMinecraftサーバー運用の手作業を整理し、WSL2の対話画面から進められるようにすることを目指しました。"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "担当したこと"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "サーバー作成・管理に必要な操作の整理"
+    },
+    {
+      "type": "bulletListItem",
+      "content": "AIを活用したツールの作成と使い方の整理"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 2
+      },
+      "content": "工夫した点"
+    },
+    {
+      "type": "heading",
+      "props": {
+        "level": 3
+      },
       "content": "ワールドを選び、環境を作る"
     },
     {
@@ -48,7 +84,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "作ったあとも操作できる"
     },
@@ -59,7 +95,7 @@
     {
       "type": "heading",
       "props": {
-        "level": 2
+        "level": 3
       },
       "content": "この制作での位置づけ"
     },
